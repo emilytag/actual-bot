@@ -18,7 +18,6 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
 if __name__ == "__main__":
-
     while True:
         with open(argfile) as f:
             lines = f.readlines()

@@ -12,7 +12,7 @@ CONSUMER_KEY = os.environ['CONSUMER_KEY']
 CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
 ACCESS_KEY = os.environ['ACCESS_KEY']
 ACCESS_SECRET = os.environ['ACCESS_SECRET']
-
+print CONSUMER_KEY
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
@@ -23,5 +23,5 @@ if __name__ == "__main__":
             lines = f.readlines()
             rand_line_num = randint(0, len(lines) - 1)
             line = lines[rand_line_num]
-            api.update_status(status=line)
+            api.update_status(line)
             time.sleep(3600)  # Tweet every 60 minutes

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import tweepy
+from tweepy import OAuthHandler
 import time
 import sys
 import os
@@ -12,8 +13,8 @@ CONSUMER_KEY = os.environ['CONSUMER_KEY']
 CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
 ACCESS_KEY = os.environ['ACCESS_KEY']
 ACCESS_SECRET = os.environ['ACCESS_SECRET']
-print CONSUMER_KEY
-auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+
+auth = OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 

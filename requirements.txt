@@ -62,7 +62,6 @@ pandas==0.17.1
 panphon==0.3
 pbr==1.8.1
 py2app==0.7.3
-pyCNN==0.0.0
 pyOpenSSL==0.13.1
 pyasn1==0.1.7
 pymongo==2.7.2

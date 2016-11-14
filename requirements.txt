@@ -83,7 +83,6 @@ six==1.10.0
 subprocess32==3.2.7
 tornado==4.0
 translate==0.0.6
-treetagger==1.0.1
 tweepy==3.5.0
 unicodecsv==0.14.1
 virtualenv==15.0.3

@@ -23,5 +23,5 @@ if __name__ == "__main__":
             lines = f.readlines()
             rand_line_num = randint(0, len(lines) - 1)
             line = lines[rand_line_num]
-            api.update_status(line.strip())
+            api.update_status(line)
             time.sleep(3600)  # Tweet every 60 minutes

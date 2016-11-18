@@ -24,10 +24,14 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
 if __name__ == "__main__":
+    used = []
     while True:
         with open(argfile) as f:
             lines = f.readlines()
             rand_line_num = randint(0, len(lines) - 1)
-            line = lines[rand_line_num]
-            api.update_status(line)
-            time.sleep(3600)  # Tweet every 60 minutes
+            if rand_line_num not in used:
+              line = lines[rand_line_num]
+              api.update_status(line)
+              time.sleep(3600)  # Tweet every 60 minutes
+            else:
+              api.update_status("!!!?!!!!!!!!!")

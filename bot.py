@@ -29,10 +29,11 @@ if __name__ == "__main__":
         with open(argfile) as f:
             lines = f.readlines()
             rand_line_num = randint(0, len(lines) - 1)
-            used.append(rand_line_num)
+            print len(set(used)), len(lines)
             if rand_line_num not in set(used):
               line = lines[rand_line_num]
               api.update_status(line)
+              used.append(rand_line_num)
               time.sleep(3600)  # Tweet every 60 minutes
             else:
               if len(set(used)) == len(lines):

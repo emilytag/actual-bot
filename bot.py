@@ -34,7 +34,8 @@ if __name__ == "__main__":
               line = lines[rand_line_num]
               api.update_status(line)
               used.append(rand_line_num)
-              time.sleep(3600)  # Tweet every 60 minutes
+              rand_time = randint(0, 3600)
+              time.sleep(rand_time)  # Tweet every 60 minutes
             else:
               if len(set(used)) == len(lines):
                 api.update_status("!!!?!!!!!!!!!")

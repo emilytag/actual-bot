@@ -32,7 +32,7 @@ if __name__ == "__main__":
               line = lines[rand_line_num]
               api.update_status(line.strip())
               del lines[rand_line_num]
-              rand_time = randint(0, 4000)
+              rand_time = randint(0, 7200)
               time.sleep(rand_time)
             else:
               api.update_status("!!!?!!!!!!!!!")
